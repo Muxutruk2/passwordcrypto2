@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='passwordcrypto',
-    version='1.0.2',
+    version='1.0.3',
     packages=find_packages(),
     author='Muxutruk',
     description='A package to help make an encrypted password manager',

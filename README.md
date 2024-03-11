@@ -10,22 +10,23 @@ This Python module provides a simple password manager for securely storing and r
 from passwordcrypto import Passwd, generate_key_from_password
 
 # Example usage
-password = b'MyStrongPassword'
-key = generate_key_from_password(password)
+password = bytes(input("Write your password: "))
 filename = 'passwords.txt'
 
 # Initialize a Passwd instance
-password_manager = Passwd(filename, key)
+password_manager = Passwd(filename, password)
 ```
 
 ### Reading Passwords
 
 ```python
-# Retrieve encrypted passwords from the file
-encrypted_passwords = password_manager.getEncryptedPasswds()
-
-# Decrypt and read stored passwords
 password_entries = password_manager.read()
+""" Outputs a list of passwords which themselves are a list of [App, Email, Password]
+Example: [
+    ['testApp', 'testEmail', 'testPassword'],
+    ['testApp2','testEmail2','testPassword2'],
+    ]
+"""
 ```
 
 ### Writing Passwords
@@ -37,6 +38,33 @@ email_address = 'user@example.com'
 user_password = 'SecurePassword123'
 
 password_manager.write(app_name, email_address, user_password)
+```
+
+### Example
+```python
+from passwordcrypto import passwordcrypto
+
+inputKey = bytes(input("Insert your password: ").encode())
+passwodManager = passwordcrypto.Passwd("example.txt", inputKey)
+
+while True:
+    option = input("\nWhat do you want to do? (1: Read 2: Write): ")
+
+    match option:
+        case "1":
+            print("\nAPP, EMAIL, PASSWORD")
+            passwordList = passwodManager.read()
+            for line in passwordList:
+                print(", ".join(line))
+
+        case "2":
+            app = input("Insert app name: ")
+            email = input("Insert email/username: ")
+            password = input("Insert password: ")
+            passwodManager.write(app,email,password)
+
+        case _:
+            exit()
 ```
 
 ## API Reference
@@ -75,5 +103,7 @@ Encrypt and write a new password entry to the file.
 - `password (str)`: The password for the application or service.
 
 ## Security Note
+
+The password used to create the instances of Passwd should not be stored anywhere, instead inputted by the user.
 
 Adjust the number of iterations in the key derivation process (`iterations` parameter in `generate_key_from_password`) based on your security requirements. Higher iterations increase security but also result in longer key derivation times.
