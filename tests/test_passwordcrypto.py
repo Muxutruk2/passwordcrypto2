@@ -2,7 +2,7 @@ import unittest
 
 import importlib.util
 import sys
-spec = importlib.util.spec_from_file_location("passwordcrypto", "passwordcrypto\passwordcrypto.py")
+spec = importlib.util.spec_from_file_location("passwordcrypto", "passwordcrypto/passwordcrypto.py")
 passwordcrypto = importlib.util.module_from_spec(spec)
 sys.modules["passwordcrypto"] = passwordcrypto
 spec.loader.exec_module(passwordcrypto)
