@@ -2,8 +2,8 @@ name: Build and Publish
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - '*'
 
 jobs:
   build:
@@ -34,17 +34,22 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-  
+
       - name: Build and test
         run: |
           python setup.py sdist bdist_wheel
           python -m unittest discover
-  
+
       - name: Set up Python for publishing
         uses: actions/setup-python@v2
         with:
           python-version: 3.10.6
-      
+
+      - name: Set version from tag
+        run: |
+          version=$(echo "${GITHUB_REF##refs/tags/}")
+          echo "::set-env name=PACKAGE_VERSION::$version"
+
       - name: Publish to PyPI
         env:
           TWINE_USERNAME: __token__
@@ -53,4 +58,3 @@ jobs:
           python -m pip install --upgrade pip
           pip install twine
           twine upload dist/*
-      
