@@ -1,1 +1,1 @@
-import passwordcrypto
+from passwordcrypto import *
