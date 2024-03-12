@@ -15,7 +15,7 @@ Change X.YY to the python version you use
 ### Initialization
 
 ```python
-from passwordcrypto import passwordcrypto
+import passwordcrypto
 
 # Example usage
 password = bytes(input("Write your password: "))
@@ -50,7 +50,7 @@ password_manager.write(app_name, email_address, user_password)
 
 ### Example
 ```python
-from passwordcrypto import passwordcrypto
+import passwordcrypto
 
 inputKey = bytes(input("Insert your password: ").encode())
 passwodManager = passwordcrypto.Passwd("example.txt", inputKey)
