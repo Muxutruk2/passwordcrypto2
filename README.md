@@ -4,17 +4,25 @@ This Python module provides a simple password manager for securely storing and r
 
 ## Usage
 
+### Installation
+
+Execute the following command: `pip install passwordcrypto`
+
+For windows users it's recommended to execute `pythonX.YY -m pip install passwordcrypto`
+
+Change X.YY to the python version you use
+
 ### Initialization
 
 ```python
-from passwordcrypto import Passwd, generate_key_from_password
+from passwordcrypto import passwordcrypto
 
 # Example usage
 password = bytes(input("Write your password: "))
 filename = 'passwords.txt'
 
 # Initialize a Passwd instance
-password_manager = Passwd(filename, password)
+password_manager = passwordcrypto.Passwd(filename, password)
 ```
 
 ### Reading Passwords
