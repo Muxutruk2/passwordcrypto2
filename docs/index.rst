@@ -10,5 +10,6 @@ Welcome to passwordcrypto's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+.. attributetable:: passwordcrypto.Passwd
+
 .. autoclass:: passwordcrypto.Passwd
-   ..automethod::
