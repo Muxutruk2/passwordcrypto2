@@ -48,7 +48,7 @@ user_password = 'SecurePassword123'
 password_manager.write(app_name, email_address, user_password)
 ```
 
-### Example
+## Example
 ```python
 import passwordcrypto
 
