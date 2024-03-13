@@ -6,7 +6,8 @@ with open('README.md', 'r', encoding='utf-8') as f:
 setup(
     name='passwordcrypto',
     version='1.0.6',
-    packages=find_packages(),
+    packages=find_packages(where='src'),
+    package_dir={"": "src"},
     author='Muxutruk',
     description='A package to help make an encrypted password manager',
     long_description=long_description,
@@ -23,7 +24,5 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
         'Intended Audience :: Developers',
-        
-        # Add more classifiers as needed
     ],
 )
