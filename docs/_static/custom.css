@@ -45,87 +45,6 @@ section {
   --blue-5: #002275;
   --blue-6: #000f40;
 
-  --settings: var(--grey-1);
-  --settings-hover: var(--grey-1-8);
-  --main-background: var(--grey-1);
-  --link-text: var(--blue-2);
-  --link-hover-text: var(--blue-6);
-  --main-text: var(--black);
-  --mobile-nav-background: var(--black);
-  --mobile-nav-text: var(--white);
-  --mobile-nav-hover-text: var(--white);
-  --mobile-nav-header-text: var(--white);
-  --nav-background: var(--main-background);
-  --nav-text: var(--grey-6);
-  --nav-hover-text: var(--grey-6);
-  --nav-header-text: var(--black);
-  --sub-header-background: var(--grey-6);
-  --search-border: var(--grey-4);
-  --search-text: var(--white);
-  --search-focus: var(--blue-1);
-  --search-button: var(--grey-1);
-  --search-button-hover: var(--grey-1-8);
-  --search-sidebar-background: var(--grey-1);
-  --search-sidebar-text: var(--grey-7);
-  --footer-text: var(--grey-5);
-  --footer-link: var(--grey-6);
-  --hr-border: var(--grey-2);
-  --main-big-headers-text: var(--black);
-  --main-big-headers-border: var(--grey-4);
-  --main-h5-header-text: var(--black);
-  --main-h6-header-text: var(--grey-4);
-  --main-h4-header-border: var(--grey-4);
-  --header-link: var(--grey-6);
-  --header-link-hover-text: var(--white);
-  --admonition-background: var(--grey-2);
-  --note-background: var(--blue-1);
-  --note-text: var(--white);
-  --warning-background: #ffe900;
-  --warning-text: var(--black);
-  --error-background: #d70022;
-  --error-text: var(--white);
-  --helpful-background: #00c8d7;
-  --helpful-text: var(--black);
-  --codeblock-background: var(--grey-2);
-  --codeblock-border: var(--grey-4);
-  --codeblock-text: var(--grey-6);
-  --inline-code-background: var(--grey-3);
-  --xref-code-background: transparent;
-  --api-entry-background: var(--grey-2);
-  --table-header-background: var(--grey-3);
-  --table-text: var(--black);
-  --table-border: var(--grey-4);
-  --mobile-active-toc: var(--grey-7);
-  --active-toc: var(--grey-3);
-  --scrollbar: rgba(0,0,0,0.2);
-  --scrollbar-hover: rgba(0,0,0,0.4);
-  --rtd-ad-border: var(--grey-3);
-  --rtd-ad-background: var(--grey-2);
-  --rtd-ad-main-text: var(--grey-6);
-  --rtd-ad-small-text: var(--grey-4);
-  --rtd-version-background: #272525;
-  --rtd-version-main-text: #fcfcfc;
-  --attribute-table-title: var(--grey-6);
-  --attribute-table-entry-border: var(--grey-3);
-  --attribute-table-entry-text: var(--grey-5);
-  --attribute-table-entry-hover-border: var(--blue-2);
-  --attribute-table-entry-hover-background: var(--grey-2);
-  --attribute-table-entry-hover-text: var(--blue-2);
-  --attribute-table-badge: var(--grey-7);
-  --highlighted-text: rgb(252, 233, 103);
-  --tabs--label-text: var(--main-text);
-  --tabs--label-text--hover: var(--main-text);
-  --tabs--label-text--active: var(--blue-1);
-  --tabs--label-text--active--hover: var(--blue-1);
-  --tabs--label-border--active: var(--blue-1);
-  --tabs--label-border--active--hover: var(--blue-1);
-}
-
-:root[data-font="serif"] {
-  --font-family: 'Georgia', 'Yu Gothic', 'Noto Sans CJK JP Regular', serif;
-}
-
-:root[data-theme="dark"] {
   --main-background: var(--grey-7);
   --link-text: var(--blue-1);
   --link-hover-text: var(--blue-2);
@@ -151,7 +70,7 @@ section {
   --note-text: var(--white);
   --warning-background: #d7b600;
   --warning-text: var(--black);
-  --error-background:  #d70022;
+  --error-background: #d70022;
   --error-text: var(--white);
   --helpful-background: #008ea4;
   --helpful-text: var(--white);
@@ -165,8 +84,8 @@ section {
   --table-text: var(--grey-1);
   --table-border: var(--grey-4);
   --active-toc: var(--grey-6);
-  --scrollbar: rgba(0,0,0,0.5);
-  --scrollbar-hover: rgba(0,0,0,0.7);
+  --scrollbar: rgba(0, 0, 0, 0.5);
+  --scrollbar-hover: rgba(0, 0, 0, 0.7);
   --rtd-ad-border: var(--grey-6);
   --rtd-ad-background: var(--grey-5);
   --rtd-ad-main-text: var(--grey-2);
@@ -181,6 +100,10 @@ section {
   --highlighted-text: rgba(250, 166, 26, 0.2);
   --search-sidebar-background: var(--grey-7);
   --search-sidebar-text: var(--search-text);
+}
+
+:root[data-font="serif"] {
+  --font-family: 'Georgia', 'Yu Gothic', 'Noto Sans CJK JP Regular', serif;
 }
 
 img[src$="snake_dark.svg"]  {
