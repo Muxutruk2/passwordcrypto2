@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='passwordcrypto',
-    version='1.0.6',
+    version='1.1.0',
     packages=find_packages(where='src'),
     package_dir={"": "src"},
     author='Muxutruk',
