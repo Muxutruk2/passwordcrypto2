@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from sphinx.builders.html import StandaloneHTMLBuilder
 from sphinx.builders.gettext import MessageCatalogBuilder, I18nBuilder, should_write, GettextRenderer
 from sphinx.locale import __
